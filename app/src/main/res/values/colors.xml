@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="offwhite">#f5f5f5</color>
+    <!--<color name="uiblack">#1f1f1f></color>
+    <color name="neonGreen">#ccff00></color>
+    <color name="searchbar">#393939></color>-->
+</resources>
