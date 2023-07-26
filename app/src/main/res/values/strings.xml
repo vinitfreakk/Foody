@@ -4,4 +4,5 @@
     <string name="hello_Home_fragment">Hello Home fragment</string>
     <string name="hello_favorite_fragment">Hello favorite fragment</string>
     <string name="hello_categories_fragment">Hello categories fragment</string>
+    <string name="search_box">search_box</string>
 </resources>

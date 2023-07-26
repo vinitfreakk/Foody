@@ -1,8 +1,11 @@
 package com.example.foody
 
+
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.navigation.Navigation
+import android.view.View
+import androidx.core.content.ContextCompat
+
 import androidx.navigation.Navigation.findNavController
 import androidx.navigation.ui.NavigationUI
 
@@ -13,6 +16,8 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+
 
         //setting up navigation controller
         val bottomNavigation = findViewById<BottomNavigationView>(R.id.btm_nav)
