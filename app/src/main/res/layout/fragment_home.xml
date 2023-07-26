@@ -7,77 +7,124 @@
     android:background="@color/white"
     tools:context=".HomeFragment">
 
-
-    <ScrollView
-        android:id="@+id/scrollView3"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_10sdp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <LinearLayout
-            android:id="@+id/linearLayout"
-            android:layout_width="match_parent"
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/_10sdp"
-            android:orientation="vertical">
+            android:fontFamily="@font/alfa_slab_one"
+            android:text="What would"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_25ssp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/alfa_slab_one"
-                android:text="What would"
+                android:text="you "
                 android:textColor="@color/black"
                 android:textSize="@dimen/_25ssp" />
 
-            <LinearLayout
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:fontFamily="@font/alfa_slab_one"
+                android:text="like to cook?"
+                android:textColor="@color/text_gray"
+                android:textSize="@dimen/_25ssp" />
+        </LinearLayout>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/alfa_slab_one"
-                    android:text="you "
-                    android:textColor="@color/black"
-                    android:textSize="@dimen/_25ssp" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="search"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/search_box_bg"
+            android:drawableRight="@drawable/baseline_search_24"
+            android:padding="@dimen/_10sdp" />
+    </LinearLayout>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/alfa_slab_one"
-                    android:text="like to eat?"
-                    android:textColor="@color/text_gray"
-                    android:textSize="@dimen/_25ssp" />
-            </LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:scrollbars="none"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+      >
 
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:layout_marginTop="@dimen/_10sdp"
-                android:background="@drawable/search_box_bg"
-                android:drawableRight="@drawable/baseline_search_24"
-                android:padding="@dimen/_10sdp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardView"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/_160sdp"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_10sdp"
                 app:cardCornerRadius="@dimen/_10sdp">
 
                 <ImageView
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="@dimen/_150sdp"
                     android:scaleType="centerCrop"
                     android:src="@drawable/ice_cream" />
             </androidx.cardview.widget.CardView>
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/alfa_slab_one"
+                android:text="Popular recipe's"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_20ssp" />
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_width="match_parent"
+                android:background="@color/black"
+                android:layout_height="@dimen/_120sdp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/alfa_slab_one"
+                android:text="Featured categories"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_20ssp"
+                />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_width="match_parent"
+                android:background="@color/black"
+                android:layout_height="@dimen/_250sdp"/>
 
         </LinearLayout>
+
+
 
     </ScrollView>
 
